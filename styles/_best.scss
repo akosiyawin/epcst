@@ -1,0 +1,25 @@
+.best__showcase {
+  margin-top: 5rem;
+  height: fit-content;
+  &_cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .card {
+      width: 75%;
+      text-align: center;
+      margin: 1rem 0;
+      padding: 4rem 0;
+      p {
+        margin-top: 1rem;
+        line-height: 2;
+      }
+      h3 {
+        font-family: $montserratTwo;
+      }
+      img {
+        width: 50%;
+      }
+    }
+  }
+}

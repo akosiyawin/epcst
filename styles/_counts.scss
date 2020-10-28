@@ -1,0 +1,23 @@
+.counts__showcase {
+  height: 10vh;
+  color: rgba(255, 255, 255, 0.945);
+  background: $epcstColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  &_info {
+    margin: 1rem;
+    ul {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      li:nth-child(1) {
+        font-weight: bolder;
+      }
+      li {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}

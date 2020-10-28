@@ -1,0 +1,31 @@
+.nav__container {
+  background: rgba(241, 241, 241, 0.965);
+  position: sticky;
+  top: 0;
+  #logo {
+    font-size: 2rem;
+    font-weight: bold;
+    flex: 0.7;
+    margin-left: 1rem;
+    color: $epcstColor;
+  }
+
+  &_item {
+    height: 6vh;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    ul {
+      margin-right: 1rem;
+      flex: 1;
+      display: flex;
+      list-style-type: none;
+      justify-content: space-between;
+      .inquire {
+        background: $epcstColor;
+        padding: 1rem 2rem;
+        border-radius: 2rem;
+      }
+    }
+  }
+}
