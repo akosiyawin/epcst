@@ -330,6 +330,20 @@ a {
   }
 }
 
+.hide {
+  opacity: 0;
+  -webkit-transform: translateY(7rem);
+          transform: translateY(7rem);
+  -webkit-transition: 0.8s all ease-in;
+  transition: 0.8s all ease-in;
+}
+
+.appear {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
 .best__showcase {
   margin-top: 5rem;
   height: -webkit-fit-content;

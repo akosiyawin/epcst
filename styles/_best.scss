@@ -1,3 +1,14 @@
+.hide {
+  opacity: 0;
+  transform: translateY(7rem);
+  transition: 0.8s all ease-in;
+}
+
+.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .best__showcase {
   margin-top: 5rem;
   height: fit-content;
