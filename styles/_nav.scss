@@ -1,7 +1,9 @@
 .nav__container {
   background: rgba(241, 241, 241, 0.965);
   position: sticky;
+  z-index: 1;
   top: 0;
+
   #logo {
     font-size: 2rem;
     font-weight: bold;

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;700&family=Montserrat:wght@400;600;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -50,6 +51,7 @@ a {
   background: rgba(241, 241, 241, 0.965);
   position: -webkit-sticky;
   position: sticky;
+  z-index: 1;
   top: 0;
 }
 
@@ -96,17 +98,87 @@ a {
   border-radius: 2rem;
 }
 
+.home {
+  position: relative;
+  overflow: hidden;
+}
+
+.home .floats img {
+  max-width: 20%;
+  position: absolute;
+  z-index: -1;
+}
+
+.home .floats .cloud__left_1 {
+  top: 35%;
+  left: -2%;
+  -webkit-animation-name: cloudl1;
+          animation-name: cloudl1;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-play-state: unset;
+          animation-play-state: unset;
+}
+
+.home .floats .cloud__right_1 {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  top: 40%;
+  left: 48%;
+  -webkit-animation-name: cloudr1;
+          animation-name: cloudr1;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-play-state: unset;
+          animation-play-state: unset;
+}
+
+.home .floats .shape__1 {
+  max-width: 50%;
+  right: -20%;
+  top: 15%;
+  -webkit-transform: rotate(-95deg);
+          transform: rotate(-95deg);
+  -webkit-animation-name: shape1;
+          animation-name: shape1;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-duration: 1.3s;
+          animation-duration: 1.3s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-play-state: unset;
+          animation-play-state: unset;
+}
+
 .home__showcase {
   background: rgba(218, 218, 218, 0.164);
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 10% 1fr 10%;
       grid-template-columns: 10% 1fr 10%;
-  -ms-grid-rows: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
+  -ms-grid-rows: 10% 1fr 1fr;
+      grid-template-rows: 10% 1fr 1fr;
 }
 
 .home__showcase_img {
@@ -129,26 +201,26 @@ a {
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1/2;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  margin-top: 2rem;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 .home__showcase_info h3 {
-  margin: 3rem 0 0.5rem;
+  margin: 0rem 0 0.5rem;
   font-size: 1.3rem;
   font-family: "Montserrat Alternates", sans-serif;
   color: #86c127;
 }
 
 .home__showcase h1 {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .home__showcase_footer {
   -ms-flex-item-align: start;
       align-self: flex-start;
-  margin-top: 2rem;
+  margin-top: 1rem;
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
@@ -163,6 +235,72 @@ a {
 
 .home__showcase_footer p {
   line-height: 1.6;
+}
+
+@-webkit-keyframes cloudr1 {
+  0% {
+    top: 40%;
+  }
+  100% {
+    top: 38%;
+    left: -2%;
+    opacity: 0.2;
+  }
+}
+
+@keyframes cloudr1 {
+  0% {
+    top: 40%;
+  }
+  100% {
+    top: 38%;
+    left: -2%;
+    opacity: 0.2;
+  }
+}
+
+@-webkit-keyframes cloudl1 {
+  0% {
+    left: -2%;
+  }
+  100% {
+    left: 45%;
+    opacity: 0.2;
+  }
+}
+
+@keyframes cloudl1 {
+  0% {
+    left: -2%;
+  }
+  100% {
+    left: 45%;
+    opacity: 0.2;
+  }
+}
+
+@-webkit-keyframes shape1 {
+  0% {
+    right: -20%;
+    top: 15%;
+  }
+  100% {
+    top: 25%;
+    max-width: 45%;
+    fill: red;
+  }
+}
+
+@keyframes shape1 {
+  0% {
+    right: -20%;
+    top: 15%;
+  }
+  100% {
+    top: 25%;
+    max-width: 45%;
+    fill: red;
+  }
 }
 
 .best__showcase {
@@ -353,6 +491,7 @@ a {
 }
 
 .courses__showcase_cards .card h3 {
+  font-family: "Montserrat Alternates", sans-serif;
   margin-top: 2rem;
 }
 
