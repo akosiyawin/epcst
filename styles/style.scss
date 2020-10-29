@@ -34,9 +34,29 @@ a {
   padding: 1rem 2.6rem;
   border-radius: 2rem;
   background: $epcstColor;
+  position: relative;
+  overflow: hidden;
   color: #fff;
   font-size: 1.4rem;
+  z-index: 1;
   cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    height: 0;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: 0.5s all ease;
+  }
+
+  &:hover::before {
+    background: rgb(0, 133, 71);
+    height: 240%;
+  }
 }
 
 @import "nav";
@@ -71,10 +91,17 @@ a {
     .row {
       display: flex;
       justify-content: space-around;
+      margin-bottom: 2rem;
       .card {
+        width: 30%;
         align-items: center;
         padding: 2rem;
         margin: 0 0.5rem;
+        transition: 0.6s all ease;
+
+        &:hover {
+          box-shadow: 0 0 0.4rem 0.2rem #333;
+        }
         .img__container {
           height: 18rem;
           width: 20rem;
@@ -168,6 +195,19 @@ a {
     }
     h1 {
       font-size: 6rem;
+    }
+  }
+
+  @keyframes shape1 {
+    0% {
+      max-width: 30%;
+      right: -20%;
+      top: 15%;
+    }
+    100% {
+      top: 25%;
+      max-width: 30%;
+      fill: red;
     }
   }
 }

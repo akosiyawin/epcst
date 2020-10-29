@@ -9,8 +9,8 @@
       z-index: -1;
     }
     .cloud__left_1 {
-      top: 35%;
-      left: -2%;
+      top: 27%;
+      left: -1%;
       animation-name: cloudl1;
       animation-timing-function: ease-in-out;
       animation-duration: 4s;
@@ -21,7 +21,7 @@
     }
     .cloud__right_1 {
       transform: rotateY(180deg);
-      top: 40%;
+      top: 35%;
       left: 48%;
       animation-name: cloudr1;
       animation-timing-function: ease-in-out;
@@ -50,7 +50,7 @@
     background: rgba(218, 218, 218, 0.164);
     display: grid;
     grid-template-columns: 10% 1fr 10%;
-    grid-template-rows: 10% 1fr 1fr;
+    grid-template-rows: 20% 1fr 1fr;
     &_img {
       max-width: 50%;
       grid-column: 2/3;
@@ -62,7 +62,7 @@
       grid-column: 2/3;
       grid-row: 1/2;
       margin-top: 2rem;
-      align-self: flex-end;
+      align-self: flex-start;
       h3 {
         margin: 0rem 0 0.5rem;
         font-size: 1.3rem;
@@ -81,7 +81,12 @@
       grid-column: 2/3;
       grid-row: 3/4;
       button {
+        background: none;
         margin: 2rem 0;
+        position: relative;
+        overflow: hidden;
+        background: $epcstColor;
+        z-index: 1;
       }
       p {
         line-height: 1.6;
@@ -92,10 +97,10 @@
 
 @keyframes cloudr1 {
   0% {
-    top: 40%;
+    top: 35%;
   }
   100% {
-    top: 38%;
+    top: 37%;
     left: -2%;
     opacity: 0.2;
   }

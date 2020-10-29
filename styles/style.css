@@ -42,9 +42,31 @@ a {
   padding: 1rem 2.6rem;
   border-radius: 2rem;
   background: #86c127;
+  position: relative;
+  overflow: hidden;
   color: #fff;
   font-size: 1.4rem;
+  z-index: 1;
   cursor: pointer;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  height: 0;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+}
+
+.btn:hover::before {
+  background: #008547;
+  height: 240%;
 }
 
 .nav__container {
@@ -110,8 +132,8 @@ a {
 }
 
 .home .floats .cloud__left_1 {
-  top: 35%;
-  left: -2%;
+  top: 27%;
+  left: -1%;
   -webkit-animation-name: cloudl1;
           animation-name: cloudl1;
   -webkit-animation-timing-function: ease-in-out;
@@ -131,7 +153,7 @@ a {
 .home .floats .cloud__right_1 {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
-  top: 40%;
+  top: 35%;
   left: 48%;
   -webkit-animation-name: cloudr1;
           animation-name: cloudr1;
@@ -177,8 +199,8 @@ a {
   display: grid;
   -ms-grid-columns: 10% 1fr 10%;
       grid-template-columns: 10% 1fr 10%;
-  -ms-grid-rows: 10% 1fr 1fr;
-      grid-template-rows: 10% 1fr 1fr;
+  -ms-grid-rows: 20% 1fr 1fr;
+      grid-template-rows: 20% 1fr 1fr;
 }
 
 .home__showcase_img {
@@ -202,8 +224,8 @@ a {
   -ms-grid-row-span: 1;
   grid-row: 1/2;
   margin-top: 2rem;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 .home__showcase_info h3 {
@@ -230,7 +252,12 @@ a {
 }
 
 .home__showcase_footer button {
+  background: none;
   margin: 2rem 0;
+  position: relative;
+  overflow: hidden;
+  background: #86c127;
+  z-index: 1;
 }
 
 .home__showcase_footer p {
@@ -239,10 +266,10 @@ a {
 
 @-webkit-keyframes cloudr1 {
   0% {
-    top: 40%;
+    top: 35%;
   }
   100% {
-    top: 38%;
+    top: 37%;
     left: -2%;
     opacity: 0.2;
   }
@@ -250,10 +277,10 @@ a {
 
 @keyframes cloudr1 {
   0% {
-    top: 40%;
+    top: 35%;
   }
   100% {
-    top: 38%;
+    top: 37%;
     left: -2%;
     opacity: 0.2;
   }
@@ -459,6 +486,10 @@ a {
   padding: 5rem;
 }
 
+.courses__showcase h1 {
+  margin-bottom: 5rem;
+}
+
 .courses__showcase_cards {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -469,28 +500,40 @@ a {
           flex-direction: column;
 }
 
-.courses__showcase_cards .card {
+.courses__showcase_cards .row {
+  margin-bottom: 2rem;
+}
+
+.courses__showcase_cards .row .card {
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: 2rem 0;
+  padding: 2rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-transition: 0.6s all ease;
+  transition: 0.6s all ease;
 }
 
-.courses__showcase_cards .card img {
+.courses__showcase_cards .row .card:hover {
+  -webkit-box-shadow: 0 0 0.4rem 0.2rem #333;
+          box-shadow: 0 0 0.4rem 0.2rem #333;
+}
+
+.courses__showcase_cards .row .card img {
   width: 100%;
 }
 
-.courses__showcase_cards .card p {
+.courses__showcase_cards .row .card p {
   line-height: 2;
   margin: 1rem 0;
 }
 
-.courses__showcase_cards .card h3 {
+.courses__showcase_cards .row .card h3 {
   font-family: "Montserrat Alternates", sans-serif;
   margin-top: 2rem;
 }
@@ -584,13 +627,21 @@ footer .copyright .info p .author {
     display: flex;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    margin-bottom: 2rem;
   }
   .courses__showcase .row .card {
+    width: 30%;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     padding: 2rem;
     margin: 0 0.5rem;
+    -webkit-transition: 0.6s all ease;
+    transition: 0.6s all ease;
+  }
+  .courses__showcase .row .card:hover {
+    -webkit-box-shadow: 0 0 0.4rem 0.2rem #333;
+            box-shadow: 0 0 0.4rem 0.2rem #333;
   }
   .courses__showcase .row .card .img__container {
     height: 18rem;
@@ -727,6 +778,30 @@ footer .copyright .info p .author {
   }
   .home__showcase h1 {
     font-size: 6rem;
+  }
+  @-webkit-keyframes shape1 {
+    0% {
+      max-width: 30%;
+      right: -20%;
+      top: 15%;
+    }
+    100% {
+      top: 25%;
+      max-width: 30%;
+      fill: red;
+    }
+  }
+  @keyframes shape1 {
+    0% {
+      max-width: 30%;
+      right: -20%;
+      top: 15%;
+    }
+    100% {
+      top: 25%;
+      max-width: 30%;
+      fill: red;
+    }
   }
 }
 /*# sourceMappingURL=style.css.map */
