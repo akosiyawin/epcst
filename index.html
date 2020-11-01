@@ -4,17 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EPCST | Official</title>
-    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="icon" href="images/epcst.jpg" />
+    <link rel="stylesheet" href="styles/home/style.css" />
   </head>
   <body>
     <div class="nav__container">
       <nav>
         <div class="nav__container_item">
-          <div id="logo">EPCST</div>
+          <div id="logo"><a href="index.html">EPCST</a></div>
           <ul>
-            <li><a href="#">Newsletter</a></li>
-            <li><a href="#" class="btn-0">About</a></li>
-            <li><a href="#" class="inquire">Inquire</a></li>
+            <li><a href="news.html">Newsletter</a></li>
+            <li><a href="about.html" class="btn-0">About</a></li>
+            <li>
+              <a
+                href="https://www.facebook.com/EPCST/"
+                target="_blank"
+                class="inquire"
+                >Inquire</a
+              >
+            </li>
           </ul>
         </div>
       </nav>
@@ -37,7 +45,7 @@
             explore this page, or you can also contact us through our official
             facebook page to know more about us, Cheers!
           </p>
-          <button class="btn btn-1">Read More</button>
+          <button class="btn btn-1" onclick="info()">Read More</button>
         </div>
         <img src="images/teaching.svg" alt="" class="home__showcase_img" />
       </div>
@@ -83,7 +91,7 @@
         <p>
           Teaching kids to count is fine, but teaching them what counts is best.
         </p>
-        <button class="btn">Get Started</button>
+        <button class="btn" onclick="info()">Get Started</button>
       </div>
     </section>
     <div class="counts__showcase">
@@ -120,7 +128,7 @@
           Find out more about life and technology, we have the Best MIT's and
           Teachers to help you.
         </p>
-        <button class="btn">Subscribe Now</button>
+        <button class="btn" onclick="info()">Subscribe Now</button>
       </div>
     </section>
     <section class="courses__showcase">
@@ -246,7 +254,7 @@
         </div>
       </div>
     </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="js/index.js"></script>
   </body>
 </html>

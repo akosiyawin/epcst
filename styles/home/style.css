@@ -84,6 +84,9 @@ a {
       -ms-flex: 0.7;
           flex: 0.7;
   margin-left: 1rem;
+}
+
+.nav__container #logo a {
   color: #86c127;
 }
 
@@ -534,8 +537,8 @@ a {
 }
 
 .courses__showcase_cards .row .card:hover {
-  -webkit-box-shadow: 0 0 0.4rem 0.2rem #333;
-          box-shadow: 0 0 0.4rem 0.2rem #333;
+  -webkit-box-shadow: 0.5rem 0.5rem 0 0.1rem #86c127, -0.2rem -0.2rem 0.2rem 0.1rem #333;
+          box-shadow: 0.5rem 0.5rem 0 0.1rem #86c127, -0.2rem -0.2rem 0.2rem 0.1rem #333;
 }
 
 .courses__showcase_cards .row .card img {
@@ -652,10 +655,6 @@ footer .copyright .info p .author {
     margin: 0 0.5rem;
     -webkit-transition: 0.6s all ease;
     transition: 0.6s all ease;
-  }
-  .courses__showcase .row .card:hover {
-    -webkit-box-shadow: 0 0 0.4rem 0.2rem #333;
-            box-shadow: 0 0 0.4rem 0.2rem #333;
   }
   .courses__showcase .row .card .img__container {
     height: 18rem;

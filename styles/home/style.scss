@@ -99,9 +99,6 @@ a {
         margin: 0 0.5rem;
         transition: 0.6s all ease;
 
-        &:hover {
-          box-shadow: 0 0 0.4rem 0.2rem #333;
-        }
         .img__container {
           height: 18rem;
           width: 20rem;
@@ -172,6 +169,7 @@ a {
       height: 8vh;
     }
   }
+
   .home__showcase {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;

@@ -14,3 +14,12 @@ const scrollAppear = () => {
 }
 
 document.addEventListener("scroll", () => scrollAppear());
+
+
+const info = () => {
+    Swal.fire(
+        'Reminder',
+        'Sorry, its not yet functional for now, message our facebook page.',
+        'info'
+    );
+}

@@ -1,0 +1,33 @@
+.home {
+  span {
+    color: $epcstColor;
+    font-weight: bold;
+  }
+  h1 {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 5rem;
+  }
+  p {
+    margin: 2rem 0;
+    font-family: "Mulish", sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    text-align: justify;
+  }
+}
+
+.animate {
+  opacity: 0;
+  transform: translateY(5rem);
+  animation-name: animate;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes animate {
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
